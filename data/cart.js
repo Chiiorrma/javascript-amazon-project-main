@@ -26,5 +26,5 @@ export function addToCart(productId) {
       quantity
     });
   }
-
+  console.log(cart);
 }
