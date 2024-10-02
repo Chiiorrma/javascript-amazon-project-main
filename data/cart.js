@@ -9,7 +9,7 @@ export const cart = [{
 export function addToCart(productId) {
   let matchingItem;
 
-  const quantitySelector = document.querySelector('js-quantity-selector-${product.id}');
+  const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
   let quantity = quantitySelector.value;
 
   cart.forEach((cartItem) => {
@@ -23,7 +23,7 @@ export function addToCart(productId) {
   } else {
     cart.push({
       productId,
-      quantity: quantity
+      quantity
     });
   }
 
