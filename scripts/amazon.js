@@ -72,13 +72,15 @@ function updateCartQuantity() {
 
   messageAdded.classList.add('added-to-cart-visible');
 
-}
+  setTimeout(() => {
+    messageAdded.classList.remove('added-to-cart-visible');
+  }, 2000)
 
-document.querySelectorAll('.add-to-cart-button')
-  .forEach((button) => {
-    button.addEventListener('click', () => {
-      const { productId } = button.dataset;
-      addToCart(productId);
-      updateCartQuantity();
-    })
-  })
+  document.querySelectorAll('.add-to-cart-button')
+    .forEach((button) => {
+      button.addEventListener('click', () => {
+        const { productId } = button.dataset;
+        addToCart(productId);
+        updateCartQuantity();
+      })
+    });
