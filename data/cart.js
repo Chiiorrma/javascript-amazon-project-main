@@ -10,7 +10,7 @@ export function addToCart(productId) {
   let matchingItem;
 
   const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
-  let quantity = quantitySelector.value;
+  let quantity = Number(quantitySelector.value);
 
   cart.forEach((cartItem) => {
     if (productId === cartItem.productId) {
